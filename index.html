@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title> Physics </title>
+</head>
+
+<body onload="setup()">
+  <div class="params-holder">
+    <div class="param">
+      <div class="text"> Длина волны (нм) </div>
+      <input size="4" type="number" step="any" id="lambda" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Показатель преломления линзы </div>
+      <input size="4" type="number" step="any" id="n1" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Показатель преломления среды </div>
+      <input size="4" type="number" step="any" id="n2" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Показатель преломления пластины </div>
+      <input size="4" type="number" step="any" id="n3" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Радиус линзы (м) </div>
+      <input size="4" type="number" step="any" id="r" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> x<sub>max</sub> (м) </div>
+      <input size="4" type="number" step="any" id="xmax" class="input" />
+    </div>
+    <div class="param">
+      <button class="button" id="run" onclick="run()">
+        Построить график
+      </button>
+    </div>
+  </div>
+
+  <div class="canvas-holder">
+    <canvas id="canvas" />
+  </div>
+
+  <div class="footer">
+    <div class="heading"> <b> Источники информации </b> </div>
+    <ul>
+      <li> Методические указания к лабораторной работе №4.03
+        (<a href="https://study.physics.itmo.ru/pluginfile.php/4244/mod_resource/content/14/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B9%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%204.03.pdf">ссылка</a>)
+      </li>
+    </ul>
+
+    Исходный код доступ на <a href="https://github.com/3450a42e848dac51d24b44dc8cfb360b/09">github</a>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
